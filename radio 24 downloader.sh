@@ -1,18 +1,36 @@
 #!/bin/bash
 clear
 echo -e "Cosa vuoi scaricare?"
+echo -e "[0] **Ascolta la diretta (devi avere VLC installato)**"
 echo -e "[1] La zanzara"
 echo -e "[2] Focus economia"
+echo -e "[3] 2024"
+echo -e "[4] Melog"
+echo -e "[5] Rassegna stampa"
 read num
 case $num in
+	0)
+	vlc https://radio24-lh.akamaihd.net/i/radio24_1@99307/master.m3u8 &
+	exit
+	;;
 	1)
 	prog="lazanzara"
 	;;
 	2)
 	prog="focus-economia"
 	;;
+	3)
+	prog="2024"
+	;;
+	4)
+	prog="melog"
+	;;
+	5)
+	prog="24mattino-rassegna-stampa"
+	;;
 	*)
 	echo "Scelta non valida"
+	exit
 	;;
 esac
 prefisso="https://podcast-radio24.ilsole24ore.com/radio24_audio/"
@@ -43,4 +61,4 @@ case $yn in
 esac
 
 LINK=$prefisso$anno$aammgg$prog$estensione
-wget -U "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)" $LINK
+wget -U "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" $LINK
