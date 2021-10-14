@@ -7,6 +7,7 @@ echo -e "[2] Focus economia"
 echo -e "[3] 2024"
 echo -e "[4] Melog"
 echo -e "[5] Rassegna stampa"
+echo -e "[6] Uno, nessuno, 100milan"
 read num
 case $num in
 	0)
@@ -27,6 +28,9 @@ case $num in
 	;;
 	5)
 	prog="24mattino-rassegna-stampa"
+	;;
+	6)
+	prog="uno-nessuno-100milan"
 	;;
 	*)
 	echo "Scelta non valida"
