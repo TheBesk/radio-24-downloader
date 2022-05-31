@@ -11,7 +11,7 @@ echo -e "[6] Uno, nessuno, 100milan"
 read num
 case $num in
 	0)
-	vlc https://radio24-lh.akamaihd.net/i/radio24_1@99307/master.m3u8 &
+	vlc https://ilsole24ore-radio.akamaized.net/hls/live/2035301/radio24/playlist.m3u8 &
 	exit
 	;;
 	1)
